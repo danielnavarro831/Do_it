@@ -1,0 +1,203 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background-color: #111;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    margin: 1rem 0 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+h1 .DO{
+    color: lime;
+}
+
+.styling {
+    font-weight: 800;
+    color: lime;
+}
+
+.input_div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.input_div p, .stat_div p{
+    color: white;
+}
+
+.stat_div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.input_div .input {
+    padding: 0.5rem 1rem;
+    height: 50px;
+    outline: none;
+    background-color: #fff;
+    width: 450px;
+    font-size: 1.15rem;
+    margin: 0.25rem;
+    border-radius: 25px;
+    border: none;
+}
+
+.stat_div .stat_input {
+    padding: 0.5rem 1rem;
+    height: 50px;
+    outline: none;
+    background-color: #fff;
+    width: 450px;
+    font-size: 1.15rem;
+    margin: 0.25rem;
+    border-radius: 25px;
+    border: none;
+}
+
+.addButton, .addStatButton {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.25px;
+    background-color: lime;
+    cursor: pointer;
+}
+
+.addButton:hover,
+.editButton:hover,
+.removeButton:hover,
+.doneButton:hover{
+    opacity: 0.7;
+}
+
+.task_container, .stat_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.item, .stat {
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid #fff;
+}
+
+.done_item {
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid #ffd800;
+}
+
+.item_input, .entered_stat{
+    background: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    width: 350px;
+    font-size: 1.4rem;
+}
+
+.done_item_input {
+    background: none;
+    outline: none;
+    color: #808080;
+    border: none;
+    width: 350px;
+    font-size: 1.4rem;
+    text-decoration: line-through;
+}
+
+.editButton {
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+    background: none;
+    outline: none;
+    color: lime;
+    border: none;
+    cursor: pointer;
+}
+
+.removeButton {
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+    background: none;
+    outline: none;
+    color: #E00;
+    border: none;
+    cursor: pointer;
+}
+
+#statLabel, .levelText{
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+    background: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.levelValue {
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+    background: none;
+    outline: none;
+    color: #ffd800;
+    border: none;
+    cursor: pointer;
+}
+
+.doneButton {
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+    background: none;
+    background: none;
+    outline: none;
+    color: #ffd800;
+    border: none;
+    cursor: pointer;
+}
+
+.statSelector {
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+    background: none;
+    background: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.stat_div h2, .input_div h2 {
+    font-size: 3rem;
+    font-weight: 100;
+    margin: 1rem 0 3rem;
+    text-align: center;
+    color: lime;
+}
