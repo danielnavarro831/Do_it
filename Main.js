@@ -77,15 +77,15 @@ class item {
         itemBox.appendChild(removeButton);
         itemBox.appendChild(doneButton);
 
-        editButton.addEventListener('click', () => this.edit(input));
-        removeButton.addEventListener('click', () => this.remove(itemBox));
-        doneButton.addEventListener('click', () => this.done(input, itemBox));
+        editButton.addEventListener('click', () => this.edit(this.input));
+        removeButton.addEventListener('click', () => this.remove(this.itemBox));
+        doneButton.addEventListener('click', () => this.done(this.input, this.itemBox));
     }
 
     edit(input) {
         input.disabled = !input.disabled;
         if (input.disabled === false) {
-            window.addEventListener('keydown', (e) => {
+            input.addEventListener('keydown', (e) => {
                 if (e.which == 13) {
                     input.disabled = true;
                 };
@@ -94,7 +94,13 @@ class item {
     }
 
     remove(itemBox) {
-        tasks.splice(tasks.indexOf(this.name), 1);
+        let index = 0;
+        for (let b = 0; b < tasks.length; b++) {
+            if (tasks[b].name === this.name) {
+                index = b;
+            };
+        }
+        tasks.splice(index, 1);
         let stat = 0;
         for (let a = 0; a < stats.length; a++) {
             if (stats[a].name === this.selected_stat) {
@@ -104,6 +110,7 @@ class item {
         this.selected_stat = "-";
         update_levels(stat);
         task_container.removeChild(itemBox);
+        console.log(tasks);
     }
 
     done(input, itemBox) {
@@ -259,3 +266,15 @@ function update_levels(stat) {
 
 addButton.addEventListener('click', check_task);
 addStatButton.addEventListener('click', check_stat);
+
+input.addEventListener('keydown', (e) => {
+    if (e.which == 13) {
+        check_task();
+    };
+})
+
+stat_input.addEventListener('keydown', (e) => {
+    if (e.which == 13) {
+        check_stat();
+    };
+})
